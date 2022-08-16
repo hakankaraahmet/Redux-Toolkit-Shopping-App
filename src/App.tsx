@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import Home from "./pages/Home";
 //Components
 import Navbar from "./components/Navbar";
+import DetailPage from "./pages/DetailPage";
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="detailPage/:itemId" element={<DetailPage />} />
         </Routes>
       </Provider>
     </div>

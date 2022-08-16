@@ -33,7 +33,13 @@ export const getProduct = createAsyncThunk(
   "devices/getProduct",
   async (id: any) => {
     return fetch(
-      ` https://upayments-studycase-api.herokuapp.com/api/products/${id}`
+      ` https://upayments-studycase-api.herokuapp.com/api/products/${id}`,
+        {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmFhaG1ldGhrbkBnbWFpbC5jb20iLCJnaXRodWIiOiJodHRwczovL2dpdGh1Yi5jb20vaGFrYW5rYXJhYWhtZXQiLCJpYXQiOjE2NjA2NTM3NDMsImV4cCI6MTY2MTA4NTc0M30.xV1kFFBWZo8vH7i1tOCU3Xbr1WGytZcEulkYktsb-1s"}`,
+        },
+      }
     ).then((res) => res.json());
     
   }

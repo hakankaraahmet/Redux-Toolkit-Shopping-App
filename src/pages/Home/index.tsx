@@ -48,7 +48,7 @@ console.log(products)
       </div>
       <div className="grid gap-8  grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mt-12">
         {filteredDevices?.map((item: any) => (
-          <Card key={item?.id} data={item} link={`/detail/${item?.id}`} />
+          <Card key={item?.id} data={item} link={`/detailPage/${item?._id}`} />
         ))}
       </div>
       <Link to="add-item">
