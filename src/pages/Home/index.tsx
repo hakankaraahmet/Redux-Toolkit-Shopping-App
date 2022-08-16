@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { fetchProducts } from "../../features/productSlice";
 import Card from "../../components/Card";
+import Filter from "../../components/Filter";
 
 const Home = () => {
   const [category, setCategory] = useState("All");
@@ -36,14 +37,14 @@ console.log(products)
     <div className="pt-12 w-full">
       <div className="flex justify-between flex-col lg:flex-row  ">
         <input
-          className="px-6 py-3 w-full lg:w-2/5 rounded-lg text-xs outline-none text-gray-500  tracking-wider "
+          className="px-6 py-3 w-full lg:w-2/5 rounded-lg text-sm outline-none text-gray-500  tracking-wider "
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Apple Watch,SamsungS21, MacbookPro..."
         />
         <div className=" w-full lg:w-2/6 px-6 py-3 text-gray-500 bg-white mt-8 lg:mt-0 rounded-lg">
-          Filtering Activity
+        <Filter handleFilter={handleFilter} category={category} />
         </div>
       </div>
       <div className="grid gap-8  grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mt-12">
