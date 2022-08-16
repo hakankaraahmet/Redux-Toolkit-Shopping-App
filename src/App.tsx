@@ -2,7 +2,7 @@ import React from "react";
 // Routing
 import { Route, Routes } from "react-router-dom";
 //Redux
-import { store } from "./app/store";
+import { store } from "./store";
 import { Provider } from "react-redux";
 //Pages
 import Home from "./pages/Home";
