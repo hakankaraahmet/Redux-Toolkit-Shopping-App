@@ -16,7 +16,6 @@ const Filter = ({ handleFilter, category }: FilterProps) => {
     dispatch(getCategories());
   }, [dispatch]);
 
-  console.log("categories", categories);
   return (
     <select
       value={category}

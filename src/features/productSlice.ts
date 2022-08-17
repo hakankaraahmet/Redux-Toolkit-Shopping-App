@@ -15,7 +15,7 @@ const initialState: ProductState = {
 };
 
 export const fetchProducts = createAsyncThunk(
-  "devices/fetchProducts",
+  "products/fetchProducts",
   async () => {
     return fetch(
       `https://upayments-studycase-api.herokuapp.com/api/products`,
@@ -30,7 +30,7 @@ export const fetchProducts = createAsyncThunk(
 );
 
 export const getProduct = createAsyncThunk(
-  "devices/getProduct",
+  "products/getProduct",
   async (id: any) => {
     return fetch(
       ` https://upayments-studycase-api.herokuapp.com/api/products/${id}`,

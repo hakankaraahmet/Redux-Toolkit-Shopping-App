@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 //Components
 import Navbar from "./components/Navbar";
 import DetailPage from "./pages/DetailPage";
+import AddPage from "./pages/AddPage";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="detailPage/:itemId" element={<DetailPage />} />
+          <Route path="addPage" element={<AddPage/>}></Route>
         </Routes>
       </Provider>
     </div>

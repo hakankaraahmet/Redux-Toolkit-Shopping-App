@@ -9,7 +9,7 @@ const DetailPage = () => {
 
   useEffect(() => {
     dispatch(getProduct(itemId));
-  }, [itemId]);
+  }, [itemId,dispatch]);
 
   return (
     <div className="flex flex-col xl:px-20 max-w-6xl mx-auto mt-12 divide-y divide-black text-left">

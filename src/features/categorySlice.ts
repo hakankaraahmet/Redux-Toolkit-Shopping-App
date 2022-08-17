@@ -12,7 +12,7 @@ const initialState: CategoriesState = {
   error: "",
 };
 
-export const getCategories = createAsyncThunk("devices/getCategories", async () => {
+export const getCategories = createAsyncThunk("products/getCategories", async () => {
   return fetch(
     "https://upayments-studycase-api.herokuapp.com/api/categories/",
     {
@@ -25,7 +25,7 @@ export const getCategories = createAsyncThunk("devices/getCategories", async () 
 });
 
 export const categoriesSlice = createSlice({
-  name: "devices",
+  name: "products",
   initialState,
   reducers: {},
   extraReducers: (builder: any) => {
@@ -40,7 +40,7 @@ export const categoriesSlice = createSlice({
     builder.addCase(getCategories.rejected, (state: CategoriesState, action:PayloadAction<[]>) => {
       state.loading = false;
       state.categories = [];
-      state.error = "Yüklenemedi"
+      state.error = "Failed to load"
     })
   }
 });
